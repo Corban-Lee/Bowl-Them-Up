@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\833497.STUDENT\\source\\repos\\Bowl-Them-Up\\BowlThemUp\\BowlThemUp.csproj": {}
+    "C:\\Users\\831249\\source\\repos\\Bowl-Them-Up\\BowlThemUp\\BowlThemUp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\833497.STUDENT\\source\\repos\\Bowl-Them-Up\\BowlThemUp\\BowlThemUp.csproj": {
+    "C:\\Users\\831249\\source\\repos\\Bowl-Them-Up\\BowlThemUp\\BowlThemUp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\833497.STUDENT\\source\\repos\\Bowl-Them-Up\\BowlThemUp\\BowlThemUp.csproj",
+        "projectUniqueName": "C:\\Users\\831249\\source\\repos\\Bowl-Them-Up\\BowlThemUp\\BowlThemUp.csproj",
         "projectName": "BowlThemUp",
-        "projectPath": "C:\\Users\\833497.STUDENT\\source\\repos\\Bowl-Them-Up\\BowlThemUp\\BowlThemUp.csproj",
-        "packagesPath": "C:\\Users\\833497.STUDENT\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\833497.STUDENT\\source\\repos\\Bowl-Them-Up\\BowlThemUp\\obj\\",
+        "projectPath": "C:\\Users\\831249\\source\\repos\\Bowl-Them-Up\\BowlThemUp\\BowlThemUp.csproj",
+        "packagesPath": "C:\\Users\\831249\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\831249\\source\\repos\\Bowl-Them-Up\\BowlThemUp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\833497.STUDENT\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\831249\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
