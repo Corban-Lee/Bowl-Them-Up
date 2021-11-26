@@ -1,13 +1,18 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 /// <summary>
 /// Summary description for Class1
 /// </summary>
-public class Class1
+namespace BowlThemUp.Models
 {
-	public BookingDetails()
+	public class BookingDetails
 	{
-		public virtual ICollection<name> BookingsId { get; set; }
+		//	I commented this out because it caused an issue   - Corban-Lee
+		//
+		//		public virtual ICollection<name> BookingsId { get; set; }
 
 		public int BookingsId { get; set; }
 
