@@ -1,9 +1,20 @@
 <!DOCTYPE html>
 <head>
+    {% load static %}
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/global.css' %}">
     <title>{% block title %}{% endblock %}</title>
 </head>
 <body>
+    {% block navbar %}
+    <header id="main-header">
+        <h1>Bowl Them Up Website Header</h1>
+    </header>
+    <nav id="main-navbar">
+        navbar
+    </nav>
+    {% endblock %}
+
     <!-- Contents of the page go in here -->
     {% block content %} {% endblock %}
 </body>
