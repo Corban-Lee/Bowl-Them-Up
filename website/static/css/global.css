@@ -13,32 +13,65 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+main {
+    position: absolute;
+    margin-top: 128px;
+    width: 100%;
+    height: fit-content;
+}
+
 #main-header {
     display: block;
     position: fixed;
     width: 100%;
-    padding: 25px 0;
+    height: 75px;
     align-content: center;
+    box-shadow: rgba(0, 0, 0, 0.26) 0px 2px 4px;
 
-    color: black;
-    background-color: green;
+    background-color: #f9f9f9;
     font-size: 30px;
     text-align: center;
     overflow: show;
 }
 
-#main-header h1 {
-    margin: 0;
-    padding: 0;
+#main-header a h1 {
+    color: black;
+    width: 100%;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    position: absolute;
 }
 
 #main-navbar {
     display: block;
     position: fixed;
     width: calc(100% - 20px);
-    margin: 100px 10px 0px 10px;
+    height: 50px;
+    margin: 75px 10px 0px 10px;
+    z-index: -1;
+    box-shadow: rgba(0, 0, 0, 0.26) 0px 2px 4px;
+    text-align: center;
 
+    background-color: #f9f9f9;
+    border-radius: 0px 0px 10px 10px;
+    overflow: auto;
+}
+
+#main-navbar a {
+    display: inline-block;
+    text-decoration: none;
+    width: 100px;
+    height: 20px;
+    margin: 7px;
     color: black;
-    background-color: red;
+    padding: 8px;
+    font-size: 20px;
     border-radius: 10px;
+    vertical-align: middle;
+    transition: all 0.3s ease-in-out;
+}
+
+#main-navbar a:hover {
+    background-color: #9f9f9f;
 }
