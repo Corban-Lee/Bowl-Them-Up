@@ -11,6 +11,7 @@
 body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121212;
 }
 
 main {
@@ -28,14 +29,14 @@ main {
     align-content: center;
     box-shadow: rgba(0, 0, 0, 0.26) 0px 2px 4px;
 
-    background-color: #f9f9f9;
+    background-color: #1c1c1c;
     font-size: 30px;
     text-align: center;
     overflow: show;
 }
 
 #main-header a h1 {
-    color: black;
+    color: #f9f9f9;
     width: 100%;
     top: 50%;
     -ms-transform: translateY(-50%);
@@ -53,7 +54,7 @@ main {
     box-shadow: rgba(0, 0, 0, 0.26) 0px 2px 4px;
     text-align: center;
 
-    background-color: #f9f9f9;
+    background-color: #1c1c1c;
     border-radius: 0px 0px 10px 10px;
     overflow: auto;
 }
@@ -64,7 +65,7 @@ main {
     width: 100px;
     height: 20px;
     margin: 7px;
-    color: black;
+    color: #f9f9f9;
     padding: 8px;
     font-size: 20px;
     border-radius: 10px;
@@ -73,5 +74,5 @@ main {
 }
 
 #main-navbar a:hover {
-    background-color: #9f9f9f;
+    background-color: #282828;
 }
