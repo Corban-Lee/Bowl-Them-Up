@@ -6,6 +6,7 @@
     font-size: 100%;
     vertical-align: baseline;
     background: transparent;
+    color: #f9f9f9;
 }
 
 body {
@@ -35,7 +36,7 @@ main {
     overflow: show;
 }
 
-#main-header a h1 {
+#main-header h1 {
     color: #f9f9f9;
     width: 100%;
     top: 50%;
