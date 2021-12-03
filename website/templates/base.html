@@ -3,12 +3,13 @@
     {% load static %}
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/global.css' %}">
+    {% block stylesheets %}{% endblock %}
     <title>BTU{% block title %}{% endblock %}</title>
 </head>
 <body>
     {% block navbar %}
     <header id="main-header">
-        <a href=""><h1>Bowl Them Up{% block header %}{% endblock %}</h1></a>
+        <h1>Bowl Them Up{% block header %}{% endblock %}</h1>
     </header>
     <nav id="main-navbar">
         <a href="{% url 'index' %}">Home</a>
