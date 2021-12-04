@@ -15,7 +15,7 @@ body {
     background-color: #121212;
 }
 
-main {
+#main-content {
     position: absolute;
     margin-top: 128px;
     width: 100%;
