@@ -1,4 +1,4 @@
-#primary-banner {
+/* #primary-banner {
     margin-top: 75px;
     margin: 75px 20px 0px 20px;
     display: block;
@@ -25,4 +25,59 @@
     height: 100%;
     vertical-align: middle;
     border-radius: 10px;
+} */
+
+main {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 50px;
+}
+
+#primary-banner {
+    background-color: #282828;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    width: fit-content;
+    height: fit-content;
+    border: 12px solid #282828;
+    border-radius: 500px;
+    overflow: hidden;
+    margin: 0px 10px;
+}
+
+#primary-banner img {
+    height: 360px;
+    margin: 0px 7px;
+    border-radius: 10px;
+}
+
+#slogan {
+    margin: 30px 0px;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    width: 100%;
+}
+
+#briefbox {
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    width: 800px;
+    overflow: hidden;
+}
+
+#brief-header-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 10px 0px;
+}
+
+#brief-header {
+    font-size: 30px;
+    text-align: left;
+    width: 800px;
 }
