@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load static %}
+{% block stylesheets %}
+<link rel="stylesheet" href="{% static 'css/register.css' %}">
+{% endblock %}
+
+{% block title %} / Register{% endblock %}
+{% block header %} / Register{% endblock %}
+
+{% block content %}
+<!-- Page content goes here -->
+    <p>Register Page</p>
+    <form name="MyForm" action=" " id="Form" onsubmit= return " " method="Get">
+		<ul>
+            <h1>Enter your details</h1>
+			<li><label for="First name">First Name</label></li>
+			<li><input type="text" name="FirstName"/></li>
+			<li><label for="Last name">Last Name</label></li>
+			<li><input type="text" name="FirstName"/></li>
+            <li><label for="Password">Password</label></li>
+			<li><input type="password" name="Password"/></li>
+            <li><label for="ComfirmPassword">Comfirm Password</label></li>
+			<li><input type="password" name="ComfirmPassword"/></li>
+            <li><label for="Phone number">Phone Number</label></li>
+			<li><input type="text" name="PhoneNumber"/></li>
+            <li><label for="Email">Email</label></li>
+			<li><input type="text" name="Email"/></li>
+            <li><input type="submit" value="Submit" id="sub"/></li>
+		</ul>
+	</form>
+{% endblock %}  
