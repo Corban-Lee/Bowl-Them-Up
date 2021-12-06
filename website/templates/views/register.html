@@ -12,20 +12,22 @@
     <p>Register Page</p>
     <form name="MyForm" action=" " id="Form" onsubmit= return " " method="Get">
 		<ul>
-            <h1>Enter your details</h1>
+            <b><p id="MainTitle">Create an account with Bowl Them Up!</p></b>
+            <h2>Enter your details below in order to make an account, which you can use to book lanes.</h2>
 			<li><label for="First name">First Name</label></li>
 			<li><input type="text" name="FirstName"/></li>
 			<li><label for="Last name">Last Name</label></li>
 			<li><input type="text" name="FirstName"/></li>
             <li><label for="Password">Password</label></li>
 			<li><input type="password" name="Password"/></li>
-            <li><label for="ComfirmPassword">Comfirm Password</label></li>
-			<li><input type="password" name="ComfirmPassword"/></li>
+            <li><label for="ConfirmPassword">Confirm Password</label></li>
+			<li><input type="password" name="ConfirmPassword"/></li>
             <li><label for="Phone number">Phone Number</label></li>
 			<li><input type="text" name="PhoneNumber"/></li>
             <li><label for="Email">Email</label></li>
 			<li><input type="text" name="Email"/></li>
             <li><input type="submit" value="Submit" id="sub"/></li>
+            <img src="{% static 'images/account.png' %}" id="img1" alt="advert 1">
 		</ul>
 	</form>
 {% endblock %}  
