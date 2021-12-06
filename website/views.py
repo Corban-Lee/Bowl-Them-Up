@@ -16,3 +16,7 @@ def account(request):
 
 def test(request):
     return render(request, "views/test.html")
+
+def login(request):
+    return render(request, "views/login.html")
+

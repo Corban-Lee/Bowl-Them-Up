@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %} / Login{% endblock %}
+{% block header %} / Login{% endblock %}
+{% load static %}
+{% block stylesheets %}
+<link rel="stylesheet" href="{% static 'css/login.css' %}">
+{% endblock %}
+{% block content %}
+<div id="primary-banner">
+<img src="{% static 'images/Bowl-Them-Up-Arcade-Img.jpg' %}" alt="ad1">
+</div>
+
+<h1><center>User Login</center></h1>
+<div id="primary-banner"><center>
+    <form name="Myform" action=" " onsubmit= return " " method= "Get">
+        <ul>
+            <h1><center>Please Enter Your Details Below</center></h1>
+    
+            <li><label for= "Email Address"></label> College Email Address: <input type= "int" name= "email"/></li>
+            <br>
+            <br>
+            <br>
+            <li><label for= "Password"></label>Password: <input type= "password" name= "pass"/></li>
+            <li><input type= "submit" name= "Submit"/></li>
+        </ul>
+    </form>
+</center></div>
+
+{% endblock %}
