@@ -98,4 +98,10 @@ main {
 
 .main-navbar a:hover {
     background-color: #282828;
+}   
+
+.flexbreak {
+    /* When using a flexbox display; use this to create a new line */
+    flex-basis: 100%;
+    height: 0;
 }
