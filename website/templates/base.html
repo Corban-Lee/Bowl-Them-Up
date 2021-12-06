@@ -11,15 +11,20 @@
     <header id="main-header">
         <h1>Bowl Them Up{% block header %}{% endblock %}</h1>
     </header>
-    <nav id="main-navbar">
-        <a href="{% url 'index' %}">Home</a>
-        <a href="{% url 'contact' %}">Contact</a>
-        <a href="{% url 'booking' %}">Bookings</a>
-        <a href="{% url 'account' %}">Account</a>
-    </nav>
+    <div id="nav-wrapper">
+        <nav class="main-navbar" style="float: left;">
+            <a href="{% url 'index' %}">Home</a>
+            <a href="{% url 'contact' %}">Contact</a>
+            <a href="{% url 'booking' %}">Bookings</a>
+        </nav>
+        <nav class="main-navbar" style="float: right;">
+            <a href="">Login</a>
+            <a href="">Register</a>
+        </nav>
+    </div>
     {% endblock %}
 
-    <div id="main-content">
+    <main>
     {% block content %} {% endblock %}
-    </div>
+    </main>
 </body>
