@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+    {% load static %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/global.css' %}">
+    {% block stylesheets %}{% endblock %}
+    <title>BTU{% block title %}{% endblock %}</title>
+</head>
+<body>
+    {% block navbar %}
+    <header id="main-header">
+        <h1>Bowl Them Up{% block header %}{% endblock %}</h1>
+    </header>
+    <div id="nav-wrapper">
+        <nav class="main-navbar" style="float: left;">
+            <a href="{% url 'index' %}">Home</a>
+            <a href="{% url 'contact' %}">Contact</a>
+            <a href="{% url 'booking' %}">Bookings</a>
+        </nav>
+        <nav class="main-navbar" style="float: right;">
+            <a href="">Login</a>
+            <a href="">Register</a>
+        </nav>
+    </div>
+    {% endblock %}
+
+    <main>
+    {% block content %} {% endblock %}
+    </main>
+</body>
