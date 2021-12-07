@@ -1,8 +1,13 @@
 #Form {
     height: max-content;
+<<<<<<< HEAD
     margin: 100px 50px;
     text-align: left;
     float: left;
+=======
+    margin: 50px 500px;
+    text-align: left;
+>>>>>>> 95dd3e6dac073876e2134b75bac0898c9535b173
     width:fit-content;
     font-size: 16px;
     border-radius: 25px;
@@ -44,6 +49,7 @@ label{
 
 #sub{
     background-color: #B300A9;
+<<<<<<< HEAD
     color: white;
     border: 2px solid white;
 }
@@ -116,4 +122,13 @@ label{
 #map{
     padding: 10px;
     border-radius: 25px;
+=======
+    color: white;
+    border: 2px solid white;
+}
+#img1{
+    width: 150px;
+    height: 150px;
+    float: right;
+>>>>>>> 95dd3e6dac073876e2134b75bac0898c9535b173
 }
