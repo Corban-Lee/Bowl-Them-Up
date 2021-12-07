@@ -1,6 +1,6 @@
 #Form {
     height: max-content;
-    margin: 50px 1220px;
+    margin: 50px 500px;
     text-align: left;
     width:fit-content;
     font-size: 16px;
@@ -12,19 +12,6 @@
 
 }
 
-#Info {
-    height: max-content;
-    margin: 50px 1220px;
-    text-align: left;
-    width:450px;
-    font-size: 16px;
-    border-radius: 25px;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color:#B300A9;
-    border: 8px solid black;
-    overflow: hidden;
-
-}
 
 ul {
     list-style-type: none;
@@ -59,13 +46,8 @@ label{
     color: white;
     border: 2px solid white;
 }
-#img{
-    width: fit-content;
-    height: fit-content;
-    float: left;
-    border: 8px solid black;
-    border-radius: 25px;
-}
-#sub{
-    margin: 0px 200px;
+#img1{
+    width: 150px;
+    height: 150px;
+    float: right;
 }
