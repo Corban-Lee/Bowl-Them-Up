@@ -2,8 +2,45 @@
 
 {% block title %} / Booking{% endblock %}
 {% block header %} / Booking{% endblock %}
-
+{% load static %}
+{% block stylesheets %}
+<link rel="stylesheet" href="{% static 'css/booking.css' %}">
+{% endblock %}
 {% block content %}
 <!-- Page content goes here -->
-    <p>Booking Page</p>
+<h1><center>Your Recent Bookings</center></h1>
+    <form id="Form" name="Myform" action=" " onsubmit= return " " method= "Get">
+        <h1 id="bookingheader">Booking No.1</h1>
+        <ul>
+            <br>
+            <br>
+            <br>
+            <br>
+            <p>Booking Id:</p>
+            <br>
+            <p>Email Used To Place Booking:</p>
+            <br>
+            <p>Name:</p>
+            <br>
+            <p>Time:</p>
+            <br>
+            <p>Date:</p>
+            <br>
+            <p>No. of Players:</p>
+            <br>
+            <p>Shoe Sizes:</p>
+            <br>
+            <p>Ball Sizes:</p>
+        </ul>
+            <div id="button">
+                <input type= "button" value= "Edit"/>
+            </div>
+
+            <div id="button">
+                <input type= "button" value= "Delete"/>
+            </div>
+    </form>
+
+<p><center>You have no other bookings</center></p>
+
 {% endblock %}  
