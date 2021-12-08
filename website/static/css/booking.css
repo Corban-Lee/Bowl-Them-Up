@@ -6,10 +6,10 @@
     font-size: 16px;
     border-radius: 25px;
     font-family: Arial, Helvetica, sans-serif;
-    background-color:hsl(303, 100%, 35%);
+    background-color:hsl(0, 0%, 100%);
     border: 8px solid black;
     overflow: hidden;
-    color: white;
+    color: rgb(0, 0, 0);
 
 }
 
@@ -85,7 +85,7 @@ label{
 
 #button{
     background-color: #ffffff;
-    color: white;
+    color: rgb(0, 0, 0);
     border: 2px solid white;
     margin-left: 1100px;
     margin-bottom: 10px;
@@ -99,5 +99,7 @@ label{
 
 #button:hover{
     background-color: black;
+    color: white;
+    border-color: black;
 
 }
