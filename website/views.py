@@ -19,3 +19,6 @@ def test(request):
     
 def register(request):
     return render(request, "views/register.html")
+
+def login(request):
+    return render(request, "views/login.html")
