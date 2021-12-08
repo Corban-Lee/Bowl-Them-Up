@@ -24,6 +24,7 @@ main {
     margin-top: 128px;
     width: 100%;
     height: fit-content;
+    z-index: -3;
 }
 
 #main-header {
