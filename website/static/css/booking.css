@@ -7,10 +7,9 @@
     border-radius: 25px;
     font-family: Arial, Helvetica, sans-serif;
     background-color:hsl(0, 0%, 100%);
-    border: 8px solid black;
+    border: 3px solid black;
     overflow: hidden;
     color: rgb(0, 0, 0);
-
 }
 
 #Info {
@@ -24,11 +23,11 @@
     background-color:#B300A9;
     border: 8px solid black;
     overflow: hidden;
-    color: white;
+    color: black;
 }
 
 p{
-    color: white;
+    color: black;
 }
 
 #bookingheader{
@@ -47,7 +46,8 @@ ul {
 
 ul li{
     margin: 10px 0px;
-    color: white;
+    color: black;
+    border:black;
 }
 
 #MainTitle{
@@ -66,8 +66,9 @@ h2{
     color: white;
 }
 
-input{
+#input{
     background-color: white;
+    border:1px solid black;
 }
 
 label{
@@ -84,9 +85,9 @@ label{
 }
 
 #button{
-    background-color: #ffffff;
-    color: rgb(0, 0, 0);
-    border: 2px solid white;
+    background-color: #B300A9;
+    color: white;
+    border: 2px solid #B300A9;
     margin-left: 1100px;
     margin-bottom: 10px;
     padding: 8px;
@@ -98,8 +99,7 @@ label{
 }
 
 #button:hover{
-    background-color: black;
-    color: white;
-    border-color: black;
+    background-color: #f500e7;
+    border-color: white;
 
 }
