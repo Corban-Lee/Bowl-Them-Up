@@ -18,14 +18,14 @@ from django.urls import path
 
 from Pages.views import (index_view, 
                         contact_view, 
-                        booking_view,
+                        create_booking,
                         login_view,
                         register_view)
 
 urlpatterns = [
     path('', index_view, name="index"),
     path('contact/', contact_view, name="contact"),
-    path('booking/', booking_view, name="booking"),
+    path('booking/create/', create_booking, name="createbooking"),
     path('login/', login_view, name="login"),
     path('register/', register_view, name="register"),
     path('admin/', admin.site.urls),
