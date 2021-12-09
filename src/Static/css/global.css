@@ -1,0 +1,100 @@
+
+/* Classes and ID's containing the word 'advert' and similar words 
+get filtered out by adblockers. So use different words.*/
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    color: #000;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+}
+
+main {
+    position: absolute;
+    margin-top: 128px;
+    width: 100%;
+    height: fit-content;
+    z-index: -3;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 50px;
+}
+
+#main-header {
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 75px;
+    align-content: center;
+    box-shadow: rgba(0, 0, 0, 0.76) 0px 2px 4px;
+
+    background-color: #1c1c1c;
+    font-size: 30px;
+    text-align: left;
+    overflow: show;
+}
+
+#main-header h1 {
+    color: #f9f9f9;
+    margin-left: 50px;
+    top: 50%;
+    transform: translate(0, 50%);
+}
+
+#nav-wrapper {
+    display: block;
+    position: fixed;
+    margin-left: 50px;
+    margin-right: 50px;
+    width: calc(100% - 100px);
+    z-index: -1;
+}
+
+.main-navbar {
+    display: inline-block;
+    width: fit-content;
+    padding: 0px 20px 0px 20px;
+    height: 50px;
+    margin-top: 75px;
+    box-shadow: rgba(0, 0, 0, 0.26) 0px 2px 4px;
+    text-align: center;
+
+    background-color: #B300A9;
+    border-radius: 0px 0px 10px 10px;
+    overflow: auto;
+}
+
+.main-navbar a {
+    display: inline-block;
+    text-decoration: none;
+    width: 100px;
+    height: 20px;
+    margin: 7px;
+    color: #f9f9f9;
+    padding: 8px;
+    font-size: 20px;
+    border-radius: 10px;
+    vertical-align: middle;
+    transition: all 0.3s ease-in-out;
+}
+
+.main-navbar a:hover {
+    background-color: #282828;
+}   
+
+.flexbreak {
+    /* When using a flexbox display; use this to create a new line */
+    flex-basis: 100%;
+    height: 0;
+}
