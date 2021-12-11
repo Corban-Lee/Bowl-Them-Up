@@ -50,8 +50,15 @@ main {
     margin: 20px 100px;
     padding: 10px 0;
     height: fit-content;
-    border-bottom: 7px solid #D000AA;
     text-align: center;
+}
+
+#info-banner hr {
+    border: 3px solid #D000AA;
+    border-radius: 200px;
+    width: 80%;
+    height: 0px;
+    margin-bottom: 20px;
 }
 
 #info-banner p {
