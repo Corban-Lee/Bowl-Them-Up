@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %} // Create Booking{% endblock title %}
+{% block header %} / Create Booking{% endblock header %}
+
+
+{% load static %}
+{% block stylesheets %}
+<link rel="stylesheet" href="{% static 'css/booking.css' %}">
+{% endblock %}
+{% block content %}
+<!-- Page content goes here -->
+<h1><center>Your Recent Bookings</center></h1>
+    <form id="Form" name="Myform" action=" " onsubmit= return " " method= "Get">
+        <h1 id="bookingheader">Booking No.1</h1>
+        <ul>
+            <li><label for= "Booking Id"></label>Booking Id: <input id="input" type= "int" name= "booking" readonly/></li>
+            <li><label for= "Time"></label>Time: <input id="input"  type= "time" name= "time"/></li>
+            <li><label for= "Date"></label>Date: <input id="input"  type= "date" name= "date"/></li>
+            <li><label for= "Players"></label>No. of Players: <input id="input"  type= "int" name= "players"/></li>
+        </ul>
+                <input id="button" type= "button" value= "Create Booking"/>
+    </form>
+
+<p><center>You have no other bookings</center></p>
+
+{% endblock %}  

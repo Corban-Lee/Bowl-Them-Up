@@ -11,8 +11,8 @@ def contact_view(request):
     return render(request, "contact.html", {})
 
 
-def booking_view(request):
-    return render(request, "booking.html", {})
+def create_booking(request):
+    return render(request, "createbooking.html", {})
 
 
 def register_view(request):
