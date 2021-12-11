@@ -7,36 +7,17 @@
 <link rel="stylesheet" href="{% static 'css/login.css' %}">
 {% endblock %}
 {% block content %}
-<div id="primary-banner"></div>
-<div id="img">
-    <img src="{% static 'images/Bowl-Them-Up-Arcade-Img.jpg' %}" alt="ad1">
+
+<div id="primary-banner">
+    <img src="{% static 'images/Bowl-Them-Up-Arcade.jpg' %}">
+    <form name="signup-form" method= "Get">
+        <ul>
+            <h1 id="title">Please Enter Your Details Below</h1>
+            <br><li><input id="text-input" type="email" placeholder="Enter Email"/></li>
+            <br><li><input id="text-input" type="password" placeholder="Enter Password"/></li>
+            <li><input id="submit-button" type="submit" placeholder="Log In"/></li>
+        </ul>
+    </form>
 </div>
 
-<h1><center>User Login</center></h1>
-    <form id="Form" name="Myform" action=" " onsubmit= return " " method= "Get">
-        <ul>
-            <h1><center>Please Enter Your Details Below</center></h1>
-    
-            <li><label for= "Email Address"></label>Email Address: <input type= "int" name= "email"/></li>
-            <br>
-            <br>
-            <li><label for= "Password"></label>Password: <input type= "password" name= "pass"/></li>
-            <br>
-            <br>
-            <div id="sub">
-                <li><input type= "submit" name= "Submit"/></li>
-            </div>
-        </ul>
-    </form>
-    <form id="Info" name="Information" action=" " onsubmit= return " " method= "Get">
-        <ul>
-            <h1><center>Please Enter Your Details Below</center></h1>
-    
-            <li><label for= "Details"></label><center>Log into your account from here to view your previous bookings, create new and cancel upcoming games.</center></li>
-            <br>
-            <br>
-            <br>
-        </ul>
-    </form>
-
-{% endblock content %}
+{% endblock %}
