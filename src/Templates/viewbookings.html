@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %} // View Booking{% endblock title %}
+{% block header %} / View Booking{% endblock header %}
+
+
+{% load static %}
+{% block stylesheets %}
+<link rel="stylesheet" href="{% static 'css/booking.css' %}">
+{% endblock %}
+
+{% block content %}
+<div id="wrapper">
+    <a id="new-booking-btn" href="{% url 'create_booking' %}">New Booking</a>
+    {% for booking in all_bookings %}
+        <div class="entry">
+            <div id="entry-banner">
+                <h1>Booking Reference Number: #{{ booking.BookingID }}</h1>
+                <div id="entry-management-container">
+                    <a href="">edit</a> | <a href="">delete</a>
+                </div>
+            </div>
+            <div id="entry-body">
+                Date & Time: {{ booking.DateTime }}
+            </div>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}
