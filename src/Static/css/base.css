@@ -16,7 +16,7 @@ get filtered out by adblockers. So use different words.*/
 body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f9f9f9;
+    background-color: #1c1c1c;
 }
 
 main {
@@ -92,6 +92,22 @@ main {
 .main-navbar a:hover {
     background-color: #282828;
 }   
+
+#main-banner-image {
+    position: fixed;
+    width: 100%;
+    z-index: -999;
+}
+
+#main-banner-image div{
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.76) 0px 2px 4px;
+    overflow: hidden !important;
+}
 
 .flexbreak {
     /* When using a flexbox display: use this to create a new line */
