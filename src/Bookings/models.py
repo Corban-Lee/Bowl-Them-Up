@@ -11,7 +11,9 @@ class AlleyLane(models.Model):
 
 
 class Player(models.Model):
-    PlayerID  = models.AutoField(primary_key=True)
+    PlayerID   = models.AutoField(primary_key=True)
+    ShoeSize   = models.IntegerField(default=False)
+    BallSize   = models.IntegerField(default=False)
 
 
 class Booking(models.Model):
