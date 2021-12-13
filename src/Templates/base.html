@@ -21,8 +21,10 @@
             <a href="{% url 'create_account' %}">Register</a>
         </nav>
     </div>
-
     <main>
-    {% block content %} {% endblock %}
+        <div id="main-banner-image" style="position: absolute;">
+            <div style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url({% static '/images/main_banner.jpg' %})"></div>
+        </div>
+        {% block content %} {% endblock %}
     </main>
 </body>
