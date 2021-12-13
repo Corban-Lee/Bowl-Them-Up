@@ -1,119 +1,91 @@
-#Form {
-    height: max-content;
-    margin: 100px 50px;
-    text-align: left;
-    float: left;
-    width:fit-content;
-    font-size: 16px;
-    border-radius: 25px;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color:#B300A9;
-    border: 8px solid black;
-    overflow: hidden;
-
-}
-
-
-ul {
-    list-style-type: none;
-}
-
-#MainTitle{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 22px;
-    text-align: center;
-    text-decoration: underline;
-    color: white;
-    text-decoration: bold;
-}
-
-h2{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 18px;
-    text-align: center;
-    color: white;
-}
-
-input{
-    background-color: white;
-}
-label{
-    padding: 5px;
-    color: white;
-}
-
-#sub{
-    background-color: #B300A9;
-    color: white;
-    border: 2px solid white;
-}
-#but{
-    display: flex;
-    vertical-align: middle;
-    margin: 0px 70px;
-}
-#AccountImg{
-    width: 150px;
-    height: 150px;
-    display: inline-block;
-    vertical-align: middle;
-    margin: 0px 80px;
-}
-#LogoImg{
-    width: 150px;
-    height: 150px;
-    display: inline-block;
-    vertical-align: middle;
-    margin: 0px 50px;
-}
-#IndexWrapper{
+#primary-banner {
+    background: radial-gradient(black, #1c1c1c);
+    margin: 20px 20px;
+    background-color: #282828;
     display: flex;
     justify-content: center;
-}
-#SecondaryWrapper{
-    display: inline-block;
-    vertical-align: middle;
-}
-#FamilyImg{
-    height: max-content;
-    margin: 100px 50px;
-    text-align: left;
-    float: left;
-    width:fit-content;
-    font-size: 16px;
-    border-radius: 25px;
-    border: 8px solid black;
+    width: 95%;
+    height: 700px;
+    border: 12px solid #282828;
+    border-radius: 500px;
     overflow: hidden;
 }
+
+#primary-banner img {
+    width: 100%;
+    align-content: left;    
+}
+
+#primary-banner .form-register {
+    padding: 75px 250px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    height: 450px;
+    justify-content: space-between;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+}
+
+#primary-banner .form-register label{
+    color: white;
+    text-align: center;
+}
+
+#primary-banner .form-register input {
+    margin: 2px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 2px 8px;
+}
+
+#primary-banner .form-register #submit{
+    display: inline-block;
+    text-decoration: none;
+    width: 25%;
+    height: 35px;
+    background-color: #B300A9;
+    color: #f9f9f9;
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 10px;
+    vertical-align: middle;
+    transition: all 0.3s ease-in-out;
+}
+
+#primary-banner .form-register #submit:hover{
+    background-color: #f500e7;
+}
+
 #Info {
     height: max-content;
-    margin: -405px 50px;
     text-align: center;
     float: left;
-    width:fit-content;
+    width:100%;
     font-size: 16px;
     color: white;
-    border-radius: 25px;
     font-family: Arial, Helvetica, sans-serif;
-    background-color:#B300A9;
-    border: 8px solid black;
+    font-weight: lighter;
     overflow: hidden;
+    margin-bottom: 50px;
 }
-#Location {
-    height: max-content;
-    margin: -250px 50px;
-    text-align: center;
-    float: left;
-    width:fit-content;
+
+#MainTitle {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.errormessage {
+    background-color: #f2dede;
+    width: 60%;
+    height: fit-content;
+    border: 4px solid #a82824;
+    border-radius: 15px;
+    padding: 8px;
+}
+
+.errormessage strong {
+    color: #a82824;
     font-size: 16px;
-    color: white;
-    border-radius: 25px;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color:#B300A9;
-    border: 8px solid black;
-    overflow: hidden;
-}
-#map{
-    padding: 10px;
-    border-radius: 25px;
 }

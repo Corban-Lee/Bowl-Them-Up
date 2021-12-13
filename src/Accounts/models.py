@@ -4,11 +4,11 @@ from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin, BaseU
 
 class CustomAccountManager(BaseUserManager):
     # Creating a normal user
-    def create_user(self, EmailAddress, username, password, **extra_fields):
+    def create_user(self, EmailAddress, password, **extra_fields):
         if not EmailAddress:
             raise ValueError(_('The Email must be set'))
         EmailAddress = self.normalize_email(EmailAddress)
-        user = self.model(email=EmailAddress, **extra_fields)
+        user = self.model(EmailAddress=EmailAddress, **extra_fields)
         user.set_password(password)
         user.save(using=self._db)
         return user
@@ -28,7 +28,7 @@ class Account(AbstractBaseUser, PermissionsMixin):
     UserID       = models.AutoField(primary_key=True)
     FirstName    = models.CharField(max_length=64)
     LastName     = models.CharField(max_length=64)
-    PhoneNumber  = models.CharField(max_length=10)
+    PhoneNumber  = models.CharField(max_length=11)
     EmailAddress = models.EmailField(max_length=128, unique=True)
     password     = models.CharField(max_length=64)
     is_staff     = models.BooleanField(_('staff'), default=False)
@@ -43,6 +43,8 @@ class Account(AbstractBaseUser, PermissionsMixin):
 
     def __str__(self):
         return self.FirstName + ' ' + self.LastName
+
+    objects = CustomAccountManager()
 
     class Meta:
         verbose_name = _('customer')
