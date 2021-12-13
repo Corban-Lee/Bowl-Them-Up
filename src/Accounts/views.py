@@ -4,7 +4,11 @@ from django.shortcuts import render
 
 
 def create(request):
-    pass
+    return render(request, 'register.html', {})
+
+
+def login(request):
+    return render(request, 'login.html', {})
 
 
 def account(request, username):
