@@ -4,7 +4,7 @@ import Bookings.views
 
 
 urlpatterns = [
-    path('create/', views.create, name="create_account"),
+    path('create/', views.register, name="create_account"),
     path('login/', views.login, name="login_account"),
     path('<str:username>/', views.account, name="view_account"),
     path('<str:username>/delete/', views.delete, name="delete"),

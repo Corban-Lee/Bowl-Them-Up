@@ -1,22 +1,23 @@
 from django.shortcuts import render
 from django.shortcuts import render
 from django.contrib.auth import authenticate, login
+from .forms import CreateUserForm
 
 # Create your views here.
 
-def signup(request):
+def register(request):
     if request.method == "POST":
         form = CreateUserForm(request.POST)
         if form.is_valid():
             form.save()
-            return render(request, "Templates/thanks.html", {'form': form})
+            return render(request, "thanks.html", {'form': form})
         else:
-            return render(request, "Templates/register.html", {'form': form})
+            return render(request, "register.html", {'form': form})
     else:
         if request.user.is_authenticated:
-            return render(request, "Templates/index.html")
+            return render(request, "index.html")
         form = CreateUserForm()
-        return render(request, "Templates/signup.html", {'form': form})
+        return render(request, "register.html", {'form': form})
 
 def loginPage(request):
     # Note: Dont name the function login() as this is a built-in function.
@@ -27,10 +28,6 @@ def loginPage(request):
         if user is not None:
             login(request, user)
             return render(request, "Templates/index.html")
-
-def create(request):
-    return render(request, 'register.html', {})
-
 
 def login(request):
     return render(request, 'login.html', {})

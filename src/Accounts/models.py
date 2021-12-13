@@ -4,17 +4,17 @@ from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin, BaseU
 
 class CustomAccountManager(BaseUserManager):
     # Creating a normal user
-    def create_user(self, email, username, password, **extra_fields):
-        if not email:
+    def create_user(self, EmailAddress, username, password, **extra_fields):
+        if not EmailAddress:
             raise ValueError(_('The Email must be set'))
-        email = self.normalize_email(email)
-        user = self.model(email=email, username=username, **extra_fields)
+        EmailAddress = self.normalize_email(EmailAddress)
+        user = self.model(email=EmailAddress, **extra_fields)
         user.set_password(password)
         user.save(using=self._db)
         return user
 
     # Creating a superuser
-    def create_superuser(self, email, username, password, **extra_fields):
+    def create_superuser(self, EmailAddress, password, **extra_fields):
         extra_fields.setdefault('is_staff', True)
         extra_fields.setdefault('is_superuser', True)
         extra_fields.setdefault('is_active', True)
@@ -22,22 +22,28 @@ class CustomAccountManager(BaseUserManager):
             raise ValueError(_('Superuser must have is_staff=True.'))
         if extra_fields.get('is_superuser') is not True:
             raise ValueError(_('Superuser must have is_superuser=True.'))
-        return self.create_user(email, username, password, **extra_fields)
+        return self.create_user(EmailAddress, password, **extra_fields)
 
 class Account(AbstractBaseUser, PermissionsMixin):
     UserID       = models.AutoField(primary_key=True)
     FirstName    = models.CharField(max_length=64)
     LastName     = models.CharField(max_length=64)
     PhoneNumber  = models.CharField(max_length=10)
-    EmailAddress = models.EmailField(max_length=128)
-    Password     = models.CharField(max_length=64)
+    EmailAddress = models.EmailField(max_length=128, unique=True)
+    password     = models.CharField(max_length=64)
     is_staff     = models.BooleanField(_('staff'), default=False)
     is_active    = models.BooleanField(_('active'), default=True)
 
     # This tells django to use the email as the main sign in field.
-    USERNAME_FIELD = 'email'
+    USERNAME_FIELD = 'EmailAddress'
     REQUIRED_FIELDS = [
-        'first_name',
-        'last_name',
-        "username"
+        'FirstName',
+        'LastName',
     ]
+
+    def __str__(self):
+        return self.FirstName + ' ' + self.LastName
+
+    class Meta:
+        verbose_name = _('customer')
+        verbose_name_plural = _('customers')
