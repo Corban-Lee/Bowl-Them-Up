@@ -42,7 +42,7 @@ main {
     background-color: #1c1c1c;
     font-size: 30px;
     text-align: left;
-    overflow: show;
+    overflow: hidden;
 }
 
 #main-header h1 {
@@ -64,7 +64,7 @@ main {
 .main-navbar {
     display: inline-block;
     width: fit-content;
-    padding: 0px 20px 0px 20px;
+    padding: 0px 20px;
     height: 50px;
     margin-top: 75px;
     box-shadow: rgba(0, 0, 0, 0.26) 0px 2px 4px;
@@ -78,11 +78,11 @@ main {
 .main-navbar a {
     display: inline-block;
     text-decoration: none;
-    width: 100px;
+    min-width: 100px;
     height: 20px;
     margin: 7px;
     color: #f9f9f9;
-    padding: 8px;
+    padding: 8px 10px;
     font-size: 20px;
     border-radius: 10px;
     vertical-align: middle;

@@ -12,6 +12,12 @@ def contact_view(request):
 
 
 def create_booking(request):
+    if request.method == "POST":
+        print("First Name:", request.POST.get("FirstName"))
+        print("Last Name:", request.POST.get("LastName"))
+        print("Date & Time:", str(request.POST.get("DateTime")).split("T"))
+        print("Player Count:", request.POST.get("PlayerCount"))        
+
     return render(request, "createbooking.html", {})
 
 

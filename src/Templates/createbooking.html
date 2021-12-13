@@ -10,7 +10,7 @@
 {% endblock %}
 {% block content %}
 <!-- Page content goes here -->
-<h1><center>Your Recent Bookings</center></h1>
+<!-- <h1><center>Your Recent Bookings</center></h1>
     <form id="Form" name="Myform" action=" " onsubmit= return " " method= "Get">
         <h1 id="bookingheader">Booking No.1</h1>
         <ul>
@@ -22,6 +22,28 @@
                 <input id="button" type= "button" value= "Create Booking"/>
     </form>
 
-<p><center>You have no other bookings</center></p>
+<p><center>You have no other bookings</center></p> -->
+<div id="form-wrapper">
+    <form id="booking-form" name="createbooking" onsubmit=return"" method="POST">
+        {% csrf_token %}
+        <h1>Booking Form</h1>
+        <ul>
+            <li class="form-item">
+                <label>Your Name:</label>
+                <input name="FirstName" type="text" placeholder="First Name">
+                <input name="LastName"  type="text" placeholder="Last Name">
+            </li>
+            <li class="form-item">
+                <label>Book For:</label>
+                <input name="DateTime" type="datetime-local">
+            </li>
+            <li class="form-item">
+                <label>Number of Players:</label>
+                <input name="PlayerCount" type="number" step="1" min="1" max="16" value="2">
+            </li>
+        </ul>
+        <input id="form-submit" type="submit">
+    </form>
+</div>
 
 {% endblock %}  
