@@ -8,6 +8,20 @@
 {% endblock %}
 
 {% block content %}
+		{% if form.errors %}
+		<div class="errormessage">
+			<strong>ERROR: </strong>
+			{% for field in form %}
+				{% for error in field.errors %}
+						<strong>{{ error|escape }} </strong>
+				{% endfor %}
+			{% endfor %}
+			{% for error in form.non_field_errors %}
+					<strong>{{ error|escape }}</strong>
+			{% endfor %}
+		</div>
+		{% endif %}
+
 	<div id="primary-banner">
 		<img src="{% static 'images/Bowl-Them-Up-Arcade.jpg' %}">
 		<form method="post" action="{% url 'create_account' %}" class="form-register">
@@ -21,20 +35,6 @@
 			<br><input id="submit" type="submit" value="Register">
 		</form>
 	</div>
-	{% if form.errors %}
-    {% for field in form %}
-        {% for error in field.errors %}
-            <div class="alert alert-danger">
-                <strong>{{ error|escape }}</strong>
-            </div>
-        {% endfor %}
-    {% endfor %}
-    {% for error in form.non_field_errors %}
-        <div class="alert alert-danger">
-            <strong>{{ error|escape }}</strong>
-        </div>
-    {% endfor %}
-	{% endif %}
 
 	<div id="Info">
 		<h1 id="MainTitle">Why create an account with us?</h1>

@@ -8,18 +8,25 @@
 {% endblock %}
 {% block content %}
 
+
+{% if error_message %}
+<div class="errormessage">
+    <strong>ERROR: {{error_message}}</strong>
+</div>
+{% endif %}
+
 <div id="primary-banner">
     <img src="{% static 'images/Bowl-Them-Up-Arcade.jpg' %}">
-    <form name="signup-form" method="post" action="{% url 'login_account' %}">
+    <form method="post" action="{% url 'login_account' %}" class="form-register" style="height: 200px; margin-top: 150px;">
         {% csrf_token %}
-        <ul>
-            <h1 id="title">Please Enter Your Details Below</h1>
-            <br><li><input id="text-input" name="EmailAddress" type="email" placeholder="Enter Email"/></li>
-            <br><li><input id="text-input" name="password" type="password" placeholder="Enter Password"/></li>
-            <li><input id="submit-button" type="submit" placeholder="Log In"/></li>
+            <label>Email Address</label>
+            <input id="text-input" name="EmailAddress" type="email" placeholder="johndoe@example.com"/>
+            <label>Password</label>
+            <input id="text-input" name="password" type="password" placeholder="Password"/>
+            <input id="submit" type="submit" value="Log In"/>
         </ul>
     </form>
-    {{form.errors}}
 </div>
+
 
 {% endblock %}

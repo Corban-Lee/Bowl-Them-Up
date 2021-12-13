@@ -28,7 +28,7 @@ class Account(AbstractBaseUser, PermissionsMixin):
     UserID       = models.AutoField(primary_key=True)
     FirstName    = models.CharField(max_length=64)
     LastName     = models.CharField(max_length=64)
-    PhoneNumber  = models.CharField(max_length=10)
+    PhoneNumber  = models.CharField(max_length=11)
     EmailAddress = models.EmailField(max_length=128, unique=True)
     password     = models.CharField(max_length=64)
     is_staff     = models.BooleanField(_('staff'), default=False)

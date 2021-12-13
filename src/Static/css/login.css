@@ -1,15 +1,6 @@
-#Body{
-    width:100%;
-    height:700px;
-    background-color:black;
-    float:left;
-    color:white;
-    }
-    
-
 #primary-banner {
     background: radial-gradient(black, #1c1c1c);
-    margin: 40px 40px;
+    margin: 20px 20px;
     background-color: #282828;
     display: flex;
     justify-content: center;
@@ -18,51 +9,65 @@
     border: 12px solid #282828;
     border-radius: 500px;
     overflow: hidden;
-    }
+}
 
 #primary-banner img {
     width: 100%;
-    
+    align-content: left;    
 }
 
-#primary-banner form{
-    width: 100%;
+#primary-banner .form-register {
+    padding: 75px 250px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    height: 450px;
+    justify-content: space-between;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
     overflow: hidden;
 }
-    
-#primary-banner form li{
-    text-align: center;
-    padding-top: 30px;
-}
 
-#primary-banner #title{
-    list-style-type:none;
-    margin-left:10px;
+#primary-banner .form-register label{
     color: white;
+    text-align: center;
 }
 
-
-#primary-banner #text-input{
-    background-color:white;
-    width: 35%;
-    height: 30px;
+#primary-banner .form-register input {
+    margin: 2px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 2px 8px;
 }
 
-#primary-banner #submit-button{
+#primary-banner .form-register #submit{
     display: inline-block;
     text-decoration: none;
-    width: 200px;
-    height: 40px;
-    margin: 7px;
+    width: 25%;
+    height: 35px;
     background-color: #B300A9;
     color: #f9f9f9;
     padding: 8px;
-    font-size: 20px;
+    font-size: 16px;
     border-radius: 10px;
     vertical-align: middle;
     transition: all 0.3s ease-in-out;
 }
 
-#primary-banner #submit-button:hover{
+#primary-banner .form-register #submit:hover{
     background-color: #f500e7;
+}
+
+.errormessage {
+    background-color: #f2dede;
+    width: 60%;
+    height: fit-content;
+    border: 4px solid #a82824;
+    border-radius: 15px;
+    padding: 8px;
+}
+
+.errormessage strong {
+    color: #a82824;
+    font-size: 16px;
 }
