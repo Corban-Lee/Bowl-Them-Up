@@ -10,14 +10,16 @@
 
 <div id="primary-banner">
     <img src="{% static 'images/Bowl-Them-Up-Arcade.jpg' %}">
-    <form name="signup-form" method= "Get">
+    <form name="signup-form" method="post" action="{% url 'login_account' %}">
+        {% csrf_token %}
         <ul>
             <h1 id="title">Please Enter Your Details Below</h1>
-            <br><li><input id="text-input" type="email" placeholder="Enter Email"/></li>
-            <br><li><input id="text-input" type="password" placeholder="Enter Password"/></li>
+            <br><li><input id="text-input" name="EmailAddress" type="email" placeholder="Enter Email"/></li>
+            <br><li><input id="text-input" name="password" type="password" placeholder="Enter Password"/></li>
             <li><input id="submit-button" type="submit" placeholder="Log In"/></li>
         </ul>
     </form>
+    {{form.errors}}
 </div>
 
 {% endblock %}

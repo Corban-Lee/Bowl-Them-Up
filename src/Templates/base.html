@@ -17,8 +17,13 @@
             <a href="{% url 'create_booking' %}">Book a Game</a>
         </nav>
         <nav class="main-navbar" style="float: right;">
+            {% if user.is_authenticated %}
+            <text>Hello {{ user.FirstName }} {{ user.LastName }}</text>
+            <a href="{% url 'signout_account' %}">Sign Out</a>
+            {% else %}
             <a href="{% url 'login_account' %}">Login</a>
             <a href="{% url 'create_account' %}">Register</a>
+            {% endif %}
         </nav>
     </div>
 
