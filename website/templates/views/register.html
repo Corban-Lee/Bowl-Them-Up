@@ -9,7 +9,8 @@
 
 {% block content %}
 <!-- Page content goes here -->
-    <form name="MyForm" action=" " id="Form" onsubmit= return " " method="Get">
+    <form name="MyForm" action="/create-account/" id="Form" method="post">
+		{% csrf_token %}
 		<ul>
             <b><p id="MainTitle">Create an account with Bowl Them Up!</p></b>
             <h2>Enter your details below in order to make an account, which you can use to book lanes.</h2>

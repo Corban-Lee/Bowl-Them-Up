@@ -39,17 +39,16 @@ main {
     display: flex;
     justify-content: center;
     padding: 0;
-    width: calc(100% - 20px);
+    width: fit-content;
     height: fit-content;
     border: 12px solid #282828;
     border-radius: 500px;
     overflow: hidden;
-    margin: 0px 10px;
+    margin: 0px 20px;
 }
 
 #primary-banner img {
     height: 360px;
-    margin: 0px 7px;
     border-radius: 10px;
 }
 

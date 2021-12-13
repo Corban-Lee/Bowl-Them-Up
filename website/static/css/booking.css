@@ -1,14 +1,15 @@
 #Form {
     height: max-content;
-    margin: 50px 1220px;
+    margin: 50px 25px;
     text-align: left;
-    width:fit-content;
+    width:1850px;
     font-size: 16px;
     border-radius: 25px;
     font-family: Arial, Helvetica, sans-serif;
-    background-color:#B300A9;
+    background-color:hsl(303, 100%, 35%);
     border: 8px solid black;
     overflow: hidden;
+    color: white;
 
 }
 
@@ -23,10 +24,24 @@
     background-color:#B300A9;
     border: 8px solid black;
     overflow: hidden;
+    color: white;
+}
+
+p{
+    color: white;
+}
+
+#bookingheader{
+    color: white;
+    width: 100%;
+    text-align: center;
 }
 
 ul {
     list-style-type: none;
+    display: block;
+    margin-left: 150px;
+    /* font-size: 15px; */
 }
 
 #MainTitle{
@@ -54,11 +69,6 @@ label{
     color: white;
 }
 
-#sub{
-    background-color: #B300A9;
-    color: white;
-    border: 2px solid white;
-}
 #img{
     width: fit-content;
     height: fit-content;
@@ -66,12 +76,19 @@ label{
     border: 8px solid black;
     border-radius: 25px;
 }
-#sub{
-    margin: 0px 200px;
+
+#button{
+    background-color: #ffffff;
+    color: white;
+    border: 2px solid white;
+    margin-left: 1750px;
+    display: block;
+    padding: 8px;
+    width: 50px;
+    text-align: center;
+    border-radius: 25px;
 }
 
-.container{
-    display: grid;
-    grid-area: "Strike_Img.jpg Tenpin_Bowling.jpg"
-                "Child_Bowling.jpg Bowling_Balls.jpg"
+#button:hover {
+    background-color: black;
 }
