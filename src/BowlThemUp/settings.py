@@ -42,7 +42,6 @@ INSTALLED_APPS = [
 
     # Third party apps
 
-    'Pages',
     'Accounts',
     'Bookings',
 ]
