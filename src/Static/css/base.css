@@ -21,14 +21,14 @@ body {
 
 main {
     position: absolute;
-    margin-top: 128px;
     width: 100%;
     height: fit-content;
     z-index: -3;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    padding-top: 50px;
+    margin-top: 75px;
+    box-shadow: rgba(0, 0, 0, 0.76) 0 10px 5px -2px;
 }
 
 #main-header {
@@ -71,7 +71,7 @@ main {
     text-align: center;
 
     background-color: #B300A9;
-    border-radius: 0px 0px 10px 10px;
+    border-radius: 0px 0px 20px 20px;
     overflow: auto;
 }
 
