@@ -28,7 +28,6 @@ main {
     justify-content: center;
     flex-wrap: wrap;
     margin-top: 75px;
-    box-shadow: rgba(0, 0, 0, 0.76) 0 10px 5px -2px;
 }
 
 #main-header {
@@ -98,13 +97,14 @@ main {
     color: #f9f9f9;
     padding: 8px 10px;
     font-size: 20px;
-    border-radius: 10px;
+    border-radius: 50px;
     vertical-align: middle;
     transition: all 0.3s ease-in-out;
 }
 
 .main-navbar a:hover {
-    background-color: #282828;
+    border-radius: 8px;
+    background-color: rgb(40, 40, 40, 0.95);
 }   
 
 #main-banner-image {
