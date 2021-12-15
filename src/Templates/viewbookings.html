@@ -21,7 +21,12 @@
                 </div>
             </div>
             <div id="entry-body">
-                Date & Time: {{ booking.DateTime }}
+                <h2>Customer Details</h2>
+                Customer Name: {{ user.FirstName }}  {{ user.LastName }} <br>
+                Customer Email: {{ user.EmailAddress }} <br><br>
+                <h2>Booking Details</h2>
+                Date & Time: {{ booking.DateTime }} <br>
+                Number Of Players: {{ booking.NumberOfPlayers }}
             </div>
         </div>
     {% endfor %}

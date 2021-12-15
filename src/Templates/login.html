@@ -16,7 +16,6 @@
 {% endif %}
 
 <div id="primary-banner">
-    <img src="{% static 'images/Bowl-Them-Up-Arcade.jpg' %}">
     <form method="post" action="{% url 'login_account' %}" class="form-register" style="height: 200px; margin-top: 150px;">
         {% csrf_token %}
             <label>Email Address</label>
@@ -26,6 +25,7 @@
             <input id="submit" type="submit" value="Log In"/>
         </ul>
     </form>
+    <img src="{% static 'images/Bowl-Them-Up-Arcade.jpg' %}">
 </div>
 
 
