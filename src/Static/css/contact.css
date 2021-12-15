@@ -1,4 +1,4 @@
-.mapouter{
+/* .mapouter{
     position:relative;
     text-align: center;
     height:200px;
@@ -97,4 +97,68 @@
 
 text {
     font-size: 18px;
+} */
+
+
+#wrapper {
+    margin-top: 550px;
+    width: 80%;
+    height: fit-content;
 }
+
+#contact-methods {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    height: 300px;
+}
+
+#contact-methods h1 {
+    color: #f9f9f9;
+    font-size: 30px;
+}
+
+#contact-methods-body {
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    width: 100%;
+    height: fit-content;
+}
+
+.contact-methods-section {
+    margin-right: 30px;
+}
+
+.contact-methods-section h2 {
+    color: #f9f9f9;
+    font-size: 25px;
+    margin: 5px 0;
+}
+
+.contact-methods-section ul {
+    list-style: none;
+    margin: 20px 0;
+}
+
+.contact-methods-section ul li h3 {
+    color: #f9f9f9;
+    font-size: 20px;
+}
+
+.contact-methods-section ul li p {
+    color: #f9f9f9;
+}
+
+/* #contact-methods section {
+    display: inline-block;
+}
+
+#contact-methods h1 {
+    color: #f9f9f9;
+    font-size: 30px;
+}
+
+#contact-methods section h1 {
+    color: #f9f9f9;
+} */
