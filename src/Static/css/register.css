@@ -40,6 +40,11 @@
     padding: 2px 8px;
 }
 
+#primary-banner .form-register input[type=number]::-webkit-outer-spin-button, #primary-banner .form-register input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 #primary-banner .form-register #submit{
     display: inline-block;
     text-decoration: none;
