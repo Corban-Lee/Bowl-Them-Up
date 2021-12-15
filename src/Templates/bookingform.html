@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %} // Create Booking{% endblock title %}
+{% block header %} / New Booking{% endblock header %}
+
+
+{% load static %}
+{% block stylesheets %}
+<link rel="stylesheet" href="{% static 'css/booking.css' %}">
+{% endblock %}
+{% block content %}
+
+<div id="form-wrapper">
+    <form id="booking-form" method="post">
+        {% csrf_token %}
+        <header>Booking Form</header>
+        <div id="form-content-wrapper">
+            <div id="form-content">
+                {{ createform }}
+            </div>
+            <button type='submit'>Create</button>
+        </div>
+    </form>
+</div>
+
+{% endblock %}
