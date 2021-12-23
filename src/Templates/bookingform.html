@@ -1,26 +1,19 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block title %} // Create Booking{% endblock title %}
 {% block header %} / New Booking{% endblock header %}
-
-
-{% load static %}
 {% block stylesheets %}
-<link rel="stylesheet" href="{% static 'css/booking.css' %}">
+<link rel="stylesheet" href="{% static 'css/bookingforms.css' %}">
 {% endblock %}
-{% block content %}
 
-<div id="form-wrapper">
-    <form id="booking-form" method="post">
+{% block content %}
+<div id='form-wrapper'>
+    <form id='form' method='POST'>
         {% csrf_token %}
-        <header>Booking Form</header>
-        <div id="form-content-wrapper">
-            <div id="form-content">
-                {{ createform }}
-            </div>
-            <button type='submit'>Create</button>
+        <div>
+            {{ form }}
         </div>
+        <input class='btn accent-btn' type='submit' value='Next'>
     </form>
 </div>
-
 {% endblock %}
