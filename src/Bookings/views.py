@@ -76,5 +76,13 @@ def edit(request):
 
 
 
-def delete(request, BookingId):
-    pass
+def delete(request, id):
+    """Delete a booking from the database"""
+
+    Booking = BookingModel.objects.filter(Id=id)
+    Lane = Booking.values('Lane')
+    Lane.Available = True
+    Lane.update()
+    Booking.delete()
+    print('deleted booking')
+    return redirect('view_bookings')
