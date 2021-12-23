@@ -1,0 +1,62 @@
+#form-wrapper {
+    width: 1000px;
+    height: fit-content;
+    margin: 390px 0 50px;
+}
+
+/* The form div contains all of the form widgets (labels, inputs, etc.). It should be better named, but that would be more work... */
+#form div {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 0 10px 15px;
+    background-color: #1c1c1c;
+    border-radius: 20px;
+    width: fit-content;
+}
+
+#form div label {
+    color: #f9f9f9;
+    font-size: 20px;
+    margin: 15px 0 5px;
+}
+
+#form div input, form div select {
+    color: #282828;
+    background: #f9f9f9;
+    width: 390px;
+    height: 40px;
+    padding: 0 5px;
+    border-radius: 10px;
+}
+
+#form div select {
+    width: 400px;
+    padding: 0;
+}
+
+.btn {
+    width: 400px;
+    height: 50px;
+    background-color: #f9f9f9;
+    color: #121212;
+    margin: 10px 10px 15px;
+    border-radius: 10px;
+    font-size: 20px;
+    padding: 0;
+}
+
+.accent-btn {
+    background-color: purple;
+    color: #f9f9f9;
+}
+
+.form-error-box {
+    background-color: #f9f9f9;
+    color: black;
+    width: 100%;
+    height: 300px;
+}
+
+
