@@ -1,5 +1,7 @@
 from django.shortcuts import render, redirect
 from django.core.exceptions import PermissionDenied
+
+from Accounts.models import Account
 from .models import BookingModel, LaneModel
 from .forms import BookingForm
 
@@ -79,10 +81,26 @@ def edit(request):
 def delete(request, id):
     """Delete a booking from the database"""
 
+    # get booking and customer objects
     Booking = BookingModel.objects.filter(Id=id)
+    Customer = Account.objects.filter(UserId=Booking.values('Customer'))
+
+
+    # check user is logged in (cant delete booking if they arent even logged in)
+    if not request.user.is_authenticated():
+        raise PermissionDenied()
+
+
+    # check user owns booking
+    if Customer.UserId != request.user.UserId:
+        raise PermissionDenied()
+
+
+    # get lane and render it 'available'
     Lane = Booking.values('Lane')
     Lane.Available = True
     Lane.update()
+
+    # delete booking and redirect to view bookings page
     Booking.delete()
-    print('deleted booking')
     return redirect('view_bookings')
