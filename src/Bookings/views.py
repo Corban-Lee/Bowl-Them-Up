@@ -1,61 +1,80 @@
 from django.shortcuts import render, redirect
-from django.http import Http404
-from .models import Booking
-from .forms import NewBookingForm
-
-# Create your views here.
+from django.core.exceptions import PermissionDenied
+from .models import BookingModel, LaneModel
+from .forms import BookingForm
 
 
-def view_bookings( request, **kwargs  ):
-    """
-    view bookings page when the user is logged in
-    """
-    user = request.user
 
-    # if 'id' in kwargs:
-    #     _id = kwargs.pop( 'id' )
+def view_bookings( request, **kw  ):
+    """view bookings page when the user is logged in"""
 
-    #     match user.is_authenticated:
-    #         case 1:
-    #             pass
+    # Get user object
+    User = request.user
 
-    if 'id' in kwargs and user.is_authenticated:
-        _id = kwargs.pop( 'id' )
-        if _id != user.UserID:
-            raise Http404( 'You dont have access to this page. I should use a different code but I dont know how; that is why this is a 404' )
+    # Try to show the users bookings
+    if 'id' in kw and User.is_authenticated:
+        _id = kw.pop( 'id' )
+        # prevent users from looking at other users bookings
+        if _id != User.UserID:
+            raise PermissionDenied()
+        # return render of webpage with booking info
+        return render(request, 'viewbookings.html', {'booking_entries': BookingModel.objects.filter( Customer = User )})
 
-        data = { 'booking_entries': Booking.objects.filter( CustomerID = _id ) }
-        return render( request, 'viewbookings.html', data )
 
-    elif 'id' in kwargs and not user.is_authenticated:
-        raise Http404( 'You dont have access to this page. I should use a different code but I dont know how; that is why this is a 404' )
+    # Prevent user from looking at bookings without being logged-in
+    elif 'id' in kw and not User.is_authenticated:
+        raise PermissionDenied()
 
-    elif 'id' not in kwargs and user.is_authenticated:
-        return redirect('view_user_bookings', user.UserID)
 
+    # Redirect user to same view but via different url that shows their ID  (maybe unecessary. could just show bookings in this func if user is auth'd)
+    elif 'id' not in kw and User.is_authenticated:
+        return redirect('view_user_bookings', User.UserID)
+
+    # Show the bookings page with no booking data
     else:
         return render( request, 'viewbookings.html', {} )
 
 
 
 def create(request):
-    """
-    create new bookings
-    """
-    if request.method == 'POST':
-        form = NewBookingForm(request.POST)
-        if form.is_valid():
-            return redirect('view_bookings')
+    """create new bookings"""
 
-    else:
-        form = NewBookingForm()
+    # Render page with new form if the method is not post
+    if request.method != 'POST':
+        form = BookingForm()
+        return render(request, 'bookingform.html', { 'form':form })
 
-    return render(request, 'bookingform.html', {'createform': form})
+    form = BookingForm(request.POST)
+
+    if form.is_valid():
+        # Save without commiting to database
+        form.save(commit=False)
+
+        # Set the form customer to the currently logged-in user
+        form.instance.Customer = request.user
+
+        # Set the form lane to a random available lane
+        Lane = LaneModel.objects.order_by('Available')[0]
+        Lane.Available = False
+        Lane.save()
+        form.instance.Lane  = Lane
+
+        # Commit to database
+        form.save()
+
+        # Redirect user to show them their bookings including this one they have
+        # just created.
+        return redirect('view_bookings')
+        
+        
+    return render(request, 'bookingform.html', { 'form':form })
+
 
 
 def edit(request):
     pass
 
 
-def delete(request):
+
+def delete(request, BookingId):
     pass
