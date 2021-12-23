@@ -1,7 +1,16 @@
 from django import forms
+from .models import BookingModel
 
 
-class NewBookingForm(forms.Form):
-    Date            = forms.DateField(    required=True, label='Booking Date',      widget=forms.DateTimeInput( attrs={'type': 'date'               } ) )
-    Time            = forms.TimeField(    required=True, label='Booking Time',      widget=forms.TimeInput(     attrs={'type': 'time', 'step': 1800 } ) )
-    NumberOfPlayers = forms.IntegerField( required=True, label='Number of Players', widget=forms.NumberInput(   attrs={'min': 1, 'max': 16          } ) )
+
+class BookingForm(forms.ModelForm):
+    """Form for the user to create a booking"""
+
+    class Meta:
+        """Self explanitory metadata"""
+        model = BookingModel
+        fields = [ 'DateTime', 'NumberOfPlayers' ]
+        widgets = {
+            'DateTime': forms.DateTimeInput(attrs={'type': 'datetime-local', 'format':'%d/%m/%Y, %H:%M'}),
+            'NumberOfPlayers': forms.NumberInput(attrs={'min':1, 'max':16, 'value':1})
+        }
