@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import get_object_or_404, render, redirect
 from django.core.exceptions import PermissionDenied
 
 from Accounts.models import Account
@@ -59,7 +59,7 @@ def create(request):
         Lane = LaneModel.objects.order_by('Available')[0]
         Lane.Available = False
         Lane.save()
-        form.instance.Lane  = Lane
+        form.instance.Lane = Lane
 
         # Commit to database
         form.save()
@@ -83,17 +83,17 @@ def delete(request, id):
 
     # get booking and customer objects
     Booking = BookingModel.objects.filter(Id=id)
-    Customer = Account.objects.filter(UserId=Booking.values('Customer'))
+    Customer = Account.objects.filter(UserID=Booking.values('Customer')[0]['Customer'])
 
 
     # check user is logged in (cant delete booking if they arent even logged in)
-    if not request.user.is_authenticated():
-        raise PermissionDenied()
+    if not request.user.is_authenticated:
+        raise PermissionDenied('You must be logged in to delete bookings')
 
 
     # check user owns booking
-    if Customer.UserId != request.user.UserId:
-        raise PermissionDenied()
+    if Customer.values('UserID')[0]['UserID'] != request.user.UserID:
+        raise PermissionDenied('Your id does not match the one who booked this game')
 
 
     # get lane and render it 'available'
