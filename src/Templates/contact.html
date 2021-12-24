@@ -9,72 +9,150 @@
 {% endblock %}
 
 {% block content %}
-    <!-- <div class="container">
-        <p>Our Location</p>
-        <div class="mapouter">
-            <div class="gmap_canvas">
-                <iframe id="gmap_canvas" src="https://maps.google.com/maps?q=Abingdon%20Str&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-            </div>
+<div id='contact-page-wrapper'>
+    <div class='contact-page-row'>
+        <!-- This row contains contact info including email and phone numbers -->
+        <h1>We would love to hear from you!</h1>
+        <div class='contact-page-row-internal'>
+            <section class='contact-page-column'>
+                <h2>Contact Regarding Bookings</h2>
+                <ul>
+                    <li>
+                        <h3>Phone Number:</h3>
+                        +44 7584 984313
+                    </li>
+                    <li>
+                        <h3>Email Address:</h3>
+                        bookings@bowlthemup.co.uk
+                    </li>
+                </ul>
+            </section>
+            <section class='contact-page-column'>
+                <h2>Careers</h2>
+                <ul>
+                    <li>
+                        <h3>Phone Number:</h3>
+                        +44 7584 986326
+                    </li>
+                    <li>
+                        <h3>Email Address</h3>
+                        careers@bowlthemup.co.uk
+                    </li>
+                </ul>
+            </section>
+            <section class='contact-page-column'>
+                <h2>Complaints</h2>
+                <ul>
+                    <li>
+                        <h3>Phone Number:</h3>
+                        +44 7584 977326
+                    </li>
+                    <li>
+                        <h3>Email Address</h3>
+                        complaints@bowlthemup.co.uk
+                    </li>
+                </ul>
+            </section>
+            <section class='contact-page-column'>
+                <h2>Other Enquiries</h2>
+                <ul>
+                    <li>
+                        <h3>Phone Number:</h3>
+                        +44 7584 986388
+                    </li>
+                    <li>
+                        <h3>Email Address</h3>
+                        customersupport@bowlthemup.co.uk
+                    </li>
+                </ul>
+            </section>
         </div>
-        <text>75 Abingdon St, Allenton, Derby DE24 8GA</text>
     </div>
+    <div class='contact-page-row'>
+        <!-- This row contains location info including address and google map iframe -->
+        <h1>Where are we located?</h1>
+        <div class='contact-page-row-internal'>
+            im working on it
 
-    <div class="container">
-        <p>Contact Us via Phone</p>
-        <br>
-        <text>Phone Number for Bookings</text><br><text>+44 7584 984313</text>
-        <br><br>
-        <text>Phone Number for Careers</text><br><text>0800 1111</text>
-        <br><br>
-        <text>Phone Number for Support</text><br><text>0800 1111</text>
+        </div>
     </div>
+</div>
 
-    <div class="container">
-        <p>Contact Us via Email</p><br>
-        <form method="get">
-            <textarea class="textbox" placeholder="Enter Text..."></textarea>
-            <input type="submit" id="button-submit" value="Submit">
-            <input type="button" id="button-clear" value="Clear"><br>
-            <text>User must be logged in to contact via email</text>
-        </form>
-    </div> -->
-    <div id="wrapper">
-        <div id="contact-methods">
-            <h1>Contact Methods</h1>
+
+    <!-- <div id="contact-page-wrapper">
+        <div class='contact-page-row'>
+            <h1 class='row-h1'>We would love to hear from you!</h1>
             <div id="contact-methods-body">
-                <section class="contact-methods-section">
-                    <h2>Phone Numbers</h2>
+                <section class='contact-methods-section contact-column'>
+                    <h2>Contact Regarding Bookings</h2>
                     <ul>
                         <li>
-                            <h3>Manage Existing Bookings:</h3>
-                            <p>+44 7584 984313</p>
+                            <h3>Phone Number:</h3>
+                            +44 7584 984313
                         </li>
                         <li>
-                            <h3>Enquire About Careers:</h3>
-                            <p>+44 7584 986326</p>
-                        </li>
-                        <li>
-                            <h3>Any Other Enquiries:</h3>
-                            <p>+44 7584 938382</p>
+                            <h3>Email Address:</h3>
+                            bookings@bowlthemup.co.uk
                         </li>
                     </ul>
                 </section>
-                <section class="contact-methods-section">
-                    <h2>Email Addresses</h2>
+                <section class='contact-methods-section contact-column'>
+                    <h2>Careers</h2>
                     <ul>
                         <li>
-                            <h3>Booking Department:</h3>  
-                            <p>support@bowlthemup-bookings.co.uk</p>
+                            <h3>Phone Number:</h3>
+                            +44 7584 986326
                         </li>
                         <li>
-                            <h3>General Support:</h3>
-                            <p>support@bowlthemup.co.uk</p>
+                            <h3>Email Address</h3>
+                            careers@bowlthemup.co.uk
+                        </li>
+                    </ul>
+                </section>
+                <section class='contact-methods-section contact-column'>
+                    <h2>Complaints</h2>
+                    <ul>
+                        <li>
+                            <h3>Phone Number:</h3>
+                            +44 7584 977326
+                        </li>
+                        <li>
+                            <h3>Email Address</h3>
+                            complaints@bowlthemup.co.uk
+                        </li>
+                    </ul>
+                </section>
+                <section class='contact-methods-section contact-column'>
+                    <h2>Other Enquiries</h2>
+                    <ul>
+                        <li>
+                            <h3>Phone Number:</h3>
+                            +44 7584 986388
+                        </li>
+                        <li>
+                            <h3>Email Address</h3>
+                            customersupport@bowlthemup.co.uk
                         </li>
                     </ul>
                 </section>
             </div>
         </div>
+        <div class="contact-page-row">
+            <h1 class='row-h1'>Where are we located?</h1>
+            <div id='location-map-internal'>
+                <section class='contact-column'>
+                    <h2>Address Information</h2>
+                    <ul>
+                        <li>Address Line 1</li>
+                        <li>Address Line 2</li>
+                        <li>Post Code</li>
+                        <li>City & County</li>
+                    </ul>
+                </section>
+                <section class='contact-column'>
+                </section>
+            </div>
+        </div>
         <div class="row"></div>
-        <div class="row"></div>
-    </div>
+    </div> -->
 {% endblock content %}  
