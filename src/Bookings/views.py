@@ -40,6 +40,8 @@ def view_bookings( request, **kw  ):
 
 def create(request):
     """create new bookings"""
+
+    # Checks if the user is logged in or not
     User = request.user
     if not User.is_authenticated:
          raise PermissionDenied()
