@@ -8,38 +8,29 @@
 {% endblock %}
 
 {% block content %}
-		{% if form.errors %}
-		<div class="errormessage">
-			<strong>ERROR: </strong>
-			{% for field in form %}
-				{% for error in field.errors %}
-						<strong>{{ error|escape }} </strong>
-				{% endfor %}
-			{% endfor %}
-			{% for error in form.non_field_errors %}
-					<strong>{{ error|escape }}</strong>
-			{% endfor %}
-		</div>
-		{% endif %}
+	<form method="post" action="{% url 'create_account' %}" class="form-register">
+		{% csrf_token %}
+		{{form.FirstName.label_tag}} {{form.FirstName}}
+		{{form.LastName.label_tag}} {{form.LastName}}
+		{{form.EmailAddress.label_tag}} {{form.EmailAddress}}
+		{{form.PhoneNumber.label_tag}} {{form.PhoneNumber}}
+		{{form.password1.label_tag}} {{form.password1}}
+		{{form.password2.label_tag}} {{form.password2}}
+		<input id="submit" type="submit" value="Register">
+		<a href="{% url 'login_account' %}">Already Got An Account?</a>
+	</form>
 
-	<div id="primary-banner">
-		<img src="{% static 'images/Bowl-Them-Up-Arcade.jpg' %}">
-		<form method="post" action="{% url 'create_account' %}" class="form-register">
-			{% csrf_token %}
-			<br>{{form.FirstName.label_tag}} {{form.FirstName}}
-			<br>{{form.LastName.label_tag}} {{form.LastName}}
-			<br>{{form.EmailAddress.label_tag}} {{form.EmailAddress}}
-			<br>{{form.PhoneNumber.label_tag}} {{form.PhoneNumber}}
-			<br>{{form.password1.label_tag}} {{form.password1}}
-			<br>{{form.password2.label_tag}} {{form.password2}}
-			<br><input id="submit" type="submit" value="Register">
-		</form>
+	{% if form.errors %}
+	<div class="errormessage">
+		<strong>ERROR: </strong>
+		{% for field in form %}
+			{% for error in field.errors %}
+					<strong>{{ error|escape }} </strong>
+			{% endfor %}
+		{% endfor %}
+		{% for error in form.non_field_errors %}
+				<strong>{{ error|escape }}</strong>
+		{% endfor %}
 	</div>
-
-	<div id="Info">
-		<h1 id="MainTitle">Why create an account with us?</h1>
-		<h3>At Bowl Them Up, we prioritise customer service before anything. We want to help you in any way that we can. When making an account with us, 
-		you will gain full access into our brilliant lanes where you can create memories that will last! With making an account, you are also signed up 
-		to our newsletter. This gives you updates on our great deals aswell as your booking reference when you book a lane.</h3>
-	</div>
+	{% endif %}
 {% endblock content %}  

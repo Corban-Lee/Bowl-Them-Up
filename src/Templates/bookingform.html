@@ -7,13 +7,11 @@
 {% endblock %}
 
 {% block content %}
-<div id='form-wrapper'>
-    <form id='form' method='POST'>
-        {% csrf_token %}
-        <div>
-            {{ form }}
-        </div>
-        <input class='btn accent-btn' type='submit' value='Next'>
-    </form>
-</div>
+<form class='form-booking' method='POST'>
+    {% csrf_token %}
+    <div>
+        {{ form }}
+    </div>
+    <input type='submit' value='Next'>
+</form>
 {% endblock %}

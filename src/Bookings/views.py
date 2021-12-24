@@ -40,7 +40,10 @@ def view_bookings( request, **kw  ):
 
 def create(request):
     """create new bookings"""
-
+    User = request.user
+    if not User.is_authenticated:
+         raise PermissionDenied()
+    
     # Render page with new form if the method is not post
     if request.method != 'POST':
         form = BookingForm()

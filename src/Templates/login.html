@@ -14,19 +14,13 @@
     <strong>ERROR: {{error_message}}</strong>
 </div>
 {% endif %}
-
-<div id="primary-banner">
-    <form method="post" action="{% url 'login_account' %}" class="form-register" style="height: 200px; margin-top: 150px;">
-        {% csrf_token %}
-            <label>Email Address</label>
-            <input id="text-input" name="EmailAddress" type="email" placeholder="johndoe@example.com"/>
-            <label>Password</label>
-            <input id="text-input" name="password" type="password" placeholder="Password"/>
-            <input id="submit" type="submit" value="Log In"/>
-        </ul>
-    </form>
-    <img src="{% static 'images/Bowl-Them-Up-Arcade.jpg' %}">
-</div>
-
-
+<form method="post" action="{% url 'login_account' %}" class="form-register" style="margin: 525px 20px 0px;">
+    {% csrf_token %}
+    <label>Email Address</label>
+    <input id="text-input" name="EmailAddress" type="email" placeholder="johndoe@example.com"/>
+    <label>Password</label>
+    <input id="text-input" name="password" type="password" placeholder="Password"/>
+    <input id="submit" type="submit" value="Log In"/>
+    <a href="{% url 'login_account' %}">Not Got An Account?</a>
+</form>
 {% endblock %}
