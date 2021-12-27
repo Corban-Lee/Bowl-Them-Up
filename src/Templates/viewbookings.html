@@ -14,7 +14,8 @@
             <div id="entry-banner">
                 <h1>Booking Reference Number: #{{ booking.Id }}</h1>
                 <div id="entry-management-container">
-                    <a href="">edit</a> | <a href="{% url 'delete_booking' booking.Id %}">delete</a>
+                    <!-- <a href="">edit</a>--> |
+                    <a href="{% url 'delete_booking' booking.Id %}">delete</a>
                 </div>
             </div>
             <div id="entry-body">
