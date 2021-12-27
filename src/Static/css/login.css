@@ -54,11 +54,12 @@
 
 .errormessage {
     background-color: #f2dede;
-    width: 55%;
+    width: 60%;
     height: fit-content;
     border: 3px solid #a82824;
     border-radius: 15px;
     padding: 8px;
+    margin-bottom: 20px;
 }
 
 .errormessage strong {

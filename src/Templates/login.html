@@ -7,14 +7,12 @@
 <link rel="stylesheet" href="{% static 'css/login.css' %}">
 {% endblock %}
 {% block content %}
-
-
-{% if error_message %}
-<div class="errormessage">
-    <strong>ERROR: {{error_message}}</strong>
-</div>
-{% endif %}
 <form method="post" action="{% url 'login_account' %}" class="form-register" style="margin: 525px 20px 0px;">
+    {% if error_message %}
+    <div class="errormessage">
+        <strong>ERROR: {{error_message}}</strong>
+    </div>
+    {% endif %}
     {% csrf_token %}
     <label>Email Address</label>
     <input id="text-input" name="EmailAddress" type="email" placeholder="johndoe@example.com"/>
